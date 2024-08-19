@@ -10,3 +10,125 @@ body {
   height: 100vh;
   background-color: $background-color;
 }
+
+// FORM WRAPPER STYLES
+
+.form-wrapper {
+  width: 700px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: $form-background-color;
+}
+
+.form-wrapper form {
+  @include flex-column;
+  gap: 1rem;
+}
+
+.form-wrapper h1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+form input,
+form textarea {
+  margin-top: $input-margin-top;
+}
+
+// NAME AND EMAIL INPUT STYLES
+
+.input-name-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.input-name-wrapper div {
+  width: 100%;
+}
+.input-name-wrapper input {
+  @include input;
+}
+.input-name-wrapper input:focus,
+.input-name-wrapper input:hover {
+  @include input-hover;
+}
+
+.input-email-wrapper input {
+  @include input;
+}
+
+.input-email-wrapper input:focus,
+.input-email-wrapper input:hover {
+  @include input-hover;
+}
+
+// GENDER TYPE INPUT STYLE
+.input-gender-type-wrapper {
+  @include flex-column;
+}
+.input-gender-type-wrapper div {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-gender-type-wrapper div div {
+  @include input;
+  @include input-border;
+  margin-top: $input-margin-top;
+  padding-top: 0.25rem;
+}
+.input-gender-type-wrapper div div:focus,
+.input-gender-type-wrapper div div:hover {
+  @include input-hover;
+}
+.input-gender-type-wrapper input {
+  margin: 0.2rem;
+}
+
+//GENDER TYPE RADIO STYLE
+.input-gender-type-wrapper input[type="radio"] {
+  @include input-radio;
+}
+
+.input-gender-type-wrapper input[type="radio"]:checked {
+  background-color: $form-background-color;
+  border-color: $input-btn-color;
+}
+.input-gender-type-wrapper input[type="radio"]:checked:after {
+  @include input-radio-checked;
+}
+
+// TEXT AREA STYLE
+.input-message-wrapper textarea {
+  @include input-border;
+  background-color: $form-background-color;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 6rem;
+  outline: none;
+  padding: 1rem;
+}
+.input-message-wrapper textarea:focus,
+.input-message-wrapper textarea:hover {
+  @include input-hover;
+}
+
+// CHECKBOX STYLE
+.input-checkbox-wrapper input[type="checkbox"] {
+  @include input-checkbox;
+}
+
+.input-checkbox-wrapper input[type="checkbox"]:checked {
+  background-color: $input-btn-color;
+  border-color: $input-btn-color;
+}
+.input-checkbox-wrapper input[type="checkbox"]:checked::after {
+  @include input-checkbox-checked;
+}
+// SUBMIT BUTTON STYLE
+.submit-btn {
+  @include submit-btn;
+}
+
+.submit-btn:hover {
+  background-color: $input-hover-color;
+}
