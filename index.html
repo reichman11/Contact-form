@@ -7,6 +7,73 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <main>
+      <div class="form-wrapper">
+        <h1>Kontaktujte nás</h1>
+        <form>
+          <!-- SECTION FOR FIRST NAME AND LAST name -->
+          <div class="input-name-wrapper">
+            <div>
+              <label for="first-name">Křestní jméno</label>
+              <input type="text" id="first-name" />
+              <p class="first-name-error"></p>
+            </div>
+            <div>
+              <label for="last-name">Přijméní</label>
+              <input type="text" id="last-name" />
+              <p class="last-name-error"></p>
+            </div>
+          </div>
+
+          <!-- EMAIL SECTION -->
+          <div class="input-email-wrapper">
+            <label for="email-address">Email</label>
+            <input type="text" id="email-address" />
+            <p class="email-error"></p>
+          </div>
+
+          <!-- GENDER TYPE SECTION -->
+          <div class="input-gender-type-wrapper">
+            <label for="gender-type">Pohlaví</label>
+            <div>
+              <div>
+                <input type="radio" id="gender-type-1" name="gender-type" />
+                <label for="gender-type-1">Muž</label>
+              </div>
+              <div>
+                <input type="radio" id="gender-type-2" name="gender-type" />
+                <label for="gender-type-2">Žena</label>
+              </div>
+            </div>
+            <p class="gender-type-error"></p>
+          </div>
+
+          <!-- MESSAGE SECTION -->
+          <div class="input-message-wrapper">
+            <label for="text-area">Zpráva</label>
+            <textarea id="text-area"></textarea>
+            <p class="message-error"></p>
+          </div>
+
+          <!-- CHECKBOX SECTION  -->
+          <div class="input-checkbox-wrapper">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">Potvrzuji, že jsem přečetl podmínky</label>
+            <p class="checkbox-error"></p>
+          </div>
+
+          <!-- SUBMIT BUTTON SECTION -->
+          <input type="submit" class="submit-btn" value="Odeslat" />
+        </form>
+
+        <!-- DIALOG SECTION -->
+        <dialog class="form-dialog">
+          <p>Váš formulář byl úspěšně odeslán!</p>
+          <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </dialog>
+      </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
