@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact form</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <main>
@@ -13,14 +20,32 @@
         <form>
           <!-- SECTION FOR FIRST NAME AND LAST name -->
           <div class="input-name-wrapper">
-            <div>
+            <div class="first-name-wrapper">
               <label for="first-name">Křestní jméno</label>
               <input type="text" id="first-name" />
+
+              <div class="input-icons-box">
+                <span class="error-icon"
+                  ><i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="success-icon"
+                  ><i class="fa-regular fa-circle-check"></i
+                ></span>
+              </div>
               <p class="first-name-error"></p>
             </div>
-            <div>
+
+            <div class="last-name-wrapper">
               <label for="last-name">Přijméní</label>
               <input type="text" id="last-name" />
+              <div class="input-icons-box">
+                <span class="error-icon"
+                  ><i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <span class="success-icon"
+                  ><i class="fa-regular fa-circle-check"></i
+                ></span>
+              </div>
               <p class="last-name-error"></p>
             </div>
           </div>
@@ -29,6 +54,14 @@
           <div class="input-email-wrapper">
             <label for="email-address">Email</label>
             <input type="text" id="email-address" />
+            <div class="input-icons-box">
+              <span class="error-icon"
+                ><i class="fa-regular fa-circle-xmark"></i
+              ></span>
+              <span class="success-icon"
+                ><i class="fa-regular fa-circle-check"></i
+              ></span>
+            </div>
             <p class="email-error"></p>
           </div>
 
