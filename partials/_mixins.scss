@@ -1,13 +1,11 @@
-* {
+@mixin reset-box {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgba(144, 238, 144, 0.353);
-}/*# sourceMappingURL=style.css.map */
+}

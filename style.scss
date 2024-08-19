@@ -1,0 +1,12 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+* {
+  @include reset-box;
+}
+
+body {
+  @include flex-center;
+  height: 100vh;
+  background-color: $background-color;
+}
