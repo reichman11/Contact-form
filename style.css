@@ -182,15 +182,40 @@ form textarea {
 }
 
 .submit-btn {
+  border-radius: 0.5rem;
+  border: 0.5px solid rgb(62, 62, 62);
   font-size: 1.1rem;
   background-color: rgb(40, 156, 108);
   color: rgb(247, 240, 240);
   height: 3rem;
-  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
 }
 
 .submit-btn:hover {
   background-color: rgb(150, 203, 182);
+}
+
+.first-name-wrapper,
+.last-name-wrapper,
+.input-email-wrapper {
+  position: relative;
+}
+
+.fa-circle-xmark {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: red;
+}
+
+.fa-circle-check {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: green;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

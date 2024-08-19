@@ -80,12 +80,21 @@
   transform: rotate(45deg);
 }
 
+// SUBMIT BUTTON STYLE
+
 @mixin submit-btn {
+  @include input-border;
   font-size: 1.1rem;
   background-color: $input-btn-color;
   color: $form-background-color;
   height: 3rem;
-  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
+}
+
+// INPUT ICONS
+@mixin icon {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
 }

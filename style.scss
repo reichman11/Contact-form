@@ -132,3 +132,20 @@ form textarea {
 .submit-btn:hover {
   background-color: $input-hover-color;
 }
+.first-name-wrapper,
+.last-name-wrapper,
+.input-email-wrapper {
+  position: relative;
+}
+
+.fa-circle-xmark {
+  @include icon;
+  color: $error-icon;
+}
+.fa-circle-check {
+  @include icon;
+  color: $success-icon;
+}
+.hidden {
+  display: none;
+}
