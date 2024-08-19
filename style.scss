@@ -132,6 +132,8 @@ form textarea {
 .submit-btn:hover {
   background-color: $input-hover-color;
 }
+
+// INPUT ICONS
 .first-name-wrapper,
 .last-name-wrapper,
 .input-email-wrapper {
@@ -146,6 +148,8 @@ form textarea {
   @include icon;
   color: $success-icon;
 }
+
+// CLASS FOR JAVASCRIPT
 .hidden {
   display: none;
 }
