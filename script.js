@@ -14,6 +14,7 @@ form.addEventListener("submit", (e) => {
 // EVENT LISTENER FOR CLOSING DIALOG
 closeBtn.addEventListener("click", () => {
   dialog.close();
+  form.reset();
 });
 
 const firstNameInput = document.querySelector("#first-name");
@@ -32,6 +33,7 @@ const lastNameSuccessIcon = document.querySelector(
   ".last-name-wrapper .success-icon"
 );
 
+// FUNCTION FOR NAME VALIDATION
 const validateName = (input, errorIcon, successIcon) => {
   const value = input.value.trim();
 
@@ -46,10 +48,12 @@ const validateName = (input, errorIcon, successIcon) => {
   }
 };
 
+// EVENT LISTENER FOR FIRSTNAME
 firstNameInput.addEventListener("input", () => {
   validateName(firstNameInput, firstNameErrorIcon, firstNameSuccessIcon);
 });
 
+// EVENT LISTENER FOR LASTNAME
 lastNameInput.addEventListener("input", () => {
   validateName(lastNameInput, lastNameErrorIcon, lastNameSuccessIcon);
 });
@@ -63,6 +67,7 @@ const emailSuccessIcon = document.querySelector(
 );
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// FUNCTION FOR EMAIL VALIDATION
 const validateEmail = () => {
   const value = emailInput.value;
 
@@ -77,10 +82,12 @@ const validateEmail = () => {
   }
 };
 
+// EVENT LISTENER FOR EMAIL
 emailInput.addEventListener("input", validateEmail);
 
 const genderTypeError = document.querySelector(".gender-type-error");
 
+// FUNCTION FOR SEX TYPE VALIDATION
 const validateSexType = () => {
   const selectedRadio = document.querySelector(
     'input[name="gender-type"]:checked'
@@ -89,12 +96,14 @@ const validateSexType = () => {
   if (!selectedRadio) {
     genderTypeError.textContent = "Vyberte pohlaví";
     genderTypeError.classList.remove("hidden");
+    genderTypeError.classList.add("error");
     return false;
   } else {
     genderTypeError.textContent = "";
     return true;
   }
 };
+
 document.querySelectorAll('input[name="gender-type"]').forEach((radio) => {
   radio.addEventListener("change", validateSexType);
 });
@@ -102,18 +111,20 @@ document.querySelectorAll('input[name="gender-type"]').forEach((radio) => {
 const messageInput = document.querySelector("#text-area");
 const messageError = document.querySelector(".message-error");
 
+// FUNCTION FOR MESSAGE VALIDATION
+
 const validateMessage = () => {
   const value = messageInput.value;
 
   if (messageInput.value === "") {
     messageError.textContent = "Zadejte Vaši zprávu";
+    messageError.classList.remove("hidden");
     messageError.classList.add("error");
-    messageError.classList.remove("success");
     return false;
   } else if (value.length > 300) {
     messageError.textContent = "Překročil jste maximální povolený počet znaků!";
+    messageError.classList.remove("hidden");
     messageError.classList.add("error");
-    messageError.classList.remove("success");
     return false;
   } else {
     messageError.textContent = "";
@@ -121,14 +132,20 @@ const validateMessage = () => {
   }
 };
 
+// EVENT LISTENER FOR MESSAGE
+
 messageInput.addEventListener("input", validateMessage);
 
 const checkbox = document.querySelector("#checkbox");
 const checkboxError = document.querySelector(".checkbox-error");
 
+// FUNCTION FOR CHECK BOX VALIDATION
+
 const validateCheckbox = () => {
   if (!checkbox.checked) {
-    checkboxError.textContent = "Zaškrtněte políčko.";
+    checkboxError.textContent = "Zaškrtněte políčko";
+    checkboxError.classList.remove("hidden");
+    checkboxError.classList.add("error");
     return false;
   } else {
     checkboxError.textContent = "";
@@ -136,7 +153,11 @@ const validateCheckbox = () => {
   }
 };
 
+// EVENT LISTENER FOR CHECKBOX
+
 checkbox.addEventListener("change", validateCheckbox);
+
+// FUNCTION FOR FORM VALIDATION
 
 const validateForm = () => {
   const isFirstNameValid = validateName(

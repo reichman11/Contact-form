@@ -12,7 +12,6 @@ body {
 }
 
 // FORM WRAPPER STYLES
-
 .form-wrapper {
   width: 700px;
   padding: 2rem;
@@ -133,6 +132,19 @@ form textarea {
   background-color: $input-hover-color;
 }
 
+// DIALOG STYLE
+
+dialog::backdrop {
+  background-color: $dialog-body-background-color;
+}
+
+.form-dialog {
+  @include dialog;
+}
+.close-btn {
+  @include close-btn;
+}
+
 // INPUT ICONS
 .first-name-wrapper,
 .last-name-wrapper,
@@ -142,14 +154,18 @@ form textarea {
 
 .fa-circle-xmark {
   @include icon;
-  color: $error-icon;
+  color: $error-color;
 }
 .fa-circle-check {
   @include icon;
-  color: $success-icon;
+  color: $success-color;
 }
 
 // CLASS FOR JAVASCRIPT
 .hidden {
   display: none;
+}
+.error {
+  margin-top: 0.5rem;
+  color: $error-color;
 }
